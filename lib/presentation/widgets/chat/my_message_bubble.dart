@@ -15,13 +15,27 @@ class MyMessageBubble extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
               color: colors.primary, 
-              borderRadius: BorderRadius.circular(20)),
+              
+              borderRadius: BorderRadius.circular(20)
+              ),
           child:  Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text(
-              message.text,
-              style: const TextStyle(color: Colors.white),
-            ),
+            child: Column(
+              children: [
+               
+              Text(
+                 message.text,
+                 //textAlign: TextAlign.left,
+                 style: const TextStyle(color: Colors.white,),
+                 
+               ),
+                
+                const Text(
+                "12:47",
+                textAlign: TextAlign.end, 
+                style:  TextStyle(color: Colors.white),)
+            ],),
+            
           ),
         ),
         const SizedBox(
